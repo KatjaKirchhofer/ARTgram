@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTgram</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+
+</head>
+
+<body onload="show()">
+    <!------------Header Area---------------->
+    <div class="header">
+        <div class="header-content">
+            <h1>ARTgram</h1>
+            <input placeholder="Suchen" onkeydown="filterPosts()" id="search" type="search">
+            <div class="header-icons">
+                <a href="index.html"> <img src="img/home-7-32.png" alt=""></a>
+                <a><img src="img/arrow-213-32.png" alt=""></a>
+                <img src="img/compass-32.png" alt="">
+                <img src="img/favorite-4-32.png" alt="">
+                <img src="img/img8.jpg" alt="">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!----------Main Area----------->
+    <div class="main-container-wrap">
+
+
+        <div class="main-container">
+            <!--------------Container Left------------------>
+            <div class="main-container-left">
+                <div class="container-friends" id="friends">
+                    <!-- <div class="friend"><img src="img/profile1.jpg" alt="">
+                        <p>Paul</p>
+                    </div>
+                    <div class="friend"><img src="img/profile2.jpg" alt="">
+                        <p>Sabine</p>
+                    </div>
+                    <div class="friend"><img src="img/profile3.jpg" alt="">
+                        <p>Thomas</p>
+                    </div>
+                    <div class="friend"><img src="img/profile4.jpg" alt="">
+                        <p>Steffi</p>
+                    </div>
+                    <div class="friend"> <img src="img/profile5.jpg" alt="">
+                        <p>Peter</p>
+                    </div>
+                    <div class="friend"><img src="img/profile6.jpg" alt="">
+                        <p>Tim</p>
+                    </div>
+                    <div class="friend"><img src="img/profile3.jpg" alt="">
+                        <p>Unknown</p>
+                    </div> -->
+                </div>
+
+                <div class="new-post" id="new-post">
+                    <h2>Neuer Post</h2>
+                    <div class="show-input show-input-new">
+                        <div class="input-left"><input id="new-post-name" placeholder="name" type="text"><input
+                                id="new-post-post" placeholder="Kommentar hinzufügen" type="text"></div> <a
+                            onclick="createPost()" href="#">posten</a>
+                    </div>
+
+                </div>
+                <div id="new-post-area">
+
+                </div>
+
+
+
+
+                <div class="post-area" id="post">
+
+
+
+                    <!-- <div class="one-post">
+                        <div class="post-headline">
+                            <div class="rec-img"><img src="img/profile1.jpg" alt=""></div>
+                            <div class="profile-name">
+                                <b>Eva</b>
+                                <p>Aboniert von Peter</p>
+                            </div>
+                        </div>
+                        <div class="post-img">
+                            <img src="img/img3.jpg" alt="">
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-icons">
+                                <div class="post-icons-left">
+                                    <img src="img/favorite-4-32.png" alt="">
+                                    <img src="img/comments-32.png" alt="">
+                                    <img src="img/arrow-213-32.png" alt="">
+                                </div>
+                                <div class="post-icons-right">
+                                    <img src="img/save-32.png" alt="">
+                                </div>
+                            </div>
+                            <div class="post-comments">
+                                <b>Name</b>
+                                <p>Kommentar</p>
+                            </div>
+                            <div class="post-time">
+                                <p>Vor 4 h</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <!------------Container Right-------------------->
+            <div class="main-container-right">
+                <div class="small-container-right">
+
+
+                    <!--Profil-->
+                    <div class="profile">
+                        <img src="img/img8.jpg" alt="">
+                        <div class="profile-name">
+                            <b>William Cifuentes</b>
+                            <p>Abstrakter Künstler</p>
+                        </div>
+                        <a href="#">Wechseln</a>
+                    </div>
+
+                    <!--Vorschläge-->
+                    <div class="recommendation">
+                        <b>Vorschläge für dich</b>
+                        <a href="#">Alle ansehen</a>
+                    </div>
+                    <div class="profile">
+                        <div class="rec-img"><img src="img/profile1.jpg" alt=""></div>
+                        <div class="profile-name">
+                            <b>Eva </b>
+                            <p>Aboniert von Peter</p>
+                        </div>
+                        <a href="#">Alle anzeigen</a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="rec-img"><img src="img/profile2.jpg" alt=""></div>
+                        <div class="profile-name">
+                            <b>Susi</b>
+                            <p>Aboniert von Sabine</p>
+                        </div>
+                        <a href="#">Alle anzeigen</a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="rec-img"><img src="img/profile3.jpg" alt=""></div>
+                        <div class="profile-name">
+                            <b>Stefan</b>
+                            <p>Aboniert von Tobi</p>
+                        </div>
+                        <a href="#">Alle anzeigen</a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="rec-img"><img src="img/profile4.jpg" alt=""></div>
+                        <div class="profile-name">
+                            <b>Gisela </b>
+                            <p>Aboniert von Sabine</p>
+                        </div>
+                        <a href="#">Alle anzeigen</a>
+                    </div>
+
+                    <div class="profile links">
+                        <a href="#">Info •</a>
+                        <a href="#">Hilfe •</a>
+                        <a href="#">Presse •</a>
+                        <a href="#">API •</a>
+                        <a href="#">Jobs •</a>
+                        <a href="#">Datenrichtlinie •</a>
+                        <a href="#">Impressum/AGB/NetzDG •</a>
+                        <a href="#">Standorte •</a>
+                        <a href="#">Top-Konten •</a>
+                        <a href="#">Hashtags •</a>
+                        <a href="#">Sprache •</a>
+                        <p>c INSTAGRAM VON FACEBOOK</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#">Info •</a>
+            <a href="#">Hilfe •</a>
+            <a href="#">Presse •</a>
+            <a href="#">API •</a>
+            <a href="#">Jobs •</a>
+            <a href="#">Datenrichtlinie •</a>
+            <a href="#">Impressum/AGB/NetzDG •</a>
+            <a href="#">Standorte •</a>
+            <a href="#">Top-Konten •</a>
+            <a href="#">Hashtags •</a>
+            <a href="#">Sprache •</a>
+            <p>c INSTAGRAM VON FACEBOOK</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
